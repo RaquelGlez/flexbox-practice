@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Comfortaa:wght@300&family=Maven+Pro&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252329;
+  font-family: "Acme", sans-serif;
+  color: snow;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.task {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: snow;
+  border: 1px solid lightgray;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: tomato;
+  text-align: center;
+}
+
+.sm {
+  width: 20px;
+}
+
+.lg {
+  width: 80px;
+}
+
+/* TASK 1 */
+
+.task-1 .container {
+  /* predeterminado: uno sobre otro */
+  /* para alinear elementos horizontalmente */
+  display: flex;
+}
+
+/* TASK 2 */
+
+.task-2 .container {
+  /* para alinear el elemento en el centro del contenedor, primero horizontalmente, luego en vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TASK 3 */
+
+.task-3 .container {
+  /* distribuir espacio entre elementos */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* TASK 4 */
+/* tener el ultimo elemento al final del contenedor, en el eje horizontal */
+/* opciones según el # de elementos que tenemos */
+
+.task-4 .option-1 .container {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.task-4 .option-1 .item:last-child {
+  margin-left: auto;
+}
+
+.task-4 .option-2 .container {
+  display: flex;
+}
+
+.task-4 .option-2 .space {
+  /* para que el elemento vacio se expanda y empuje el elemento al final */
+  flex-grow: 1;
+}
+
+.task-4 .option-3 .container {
+  display: flex;
+}
+
+.task-4 .option-3 .item:first-child {
+  /* expande tanto como puede el primer elemento, llevando el segundo al final */
+  flex-grow: 1;
+}
+
+/* TASK 5 */
+/* diseño de columna de tamaño relativo, dando a cada elemento un tamaño */
+.task-5 .container {
+  display: flex;
+}
+
+.task-5 .item-1 {
+  flex: 3;
+}
+
+.task-5 .item-2 {
+  flex: 1;
+}
+
+.task-5 .item-3 {
+  flex: 1;
+}
+
+.task-5 .item-4 {
+  flex: 1;
+}
+
+/* TASK 6 */
+/* Diseño responsivo en Flexbox con y sin media queries */
+.task-6 .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-6 .item {
+  /* para obtener dos columnas */
+  flex-basis: 50%;
+
+}
+
+@media (min-width: 375px) {
+  .task-6 .item {
+    display: flex;
+    flex-basis: 25%;
+  }
+}
+
+/* TASK 7 */
+/* cambiar orden de items */
+.task-7 .container {
+display: flex;
+}
+
+.task-7 .item-1 {
+  order:1;
+}
+
+.task-7 .item-3 {
+}
+
+/* TASK 8 */
+/* cambiar la posicion de un elemento, dentro del contendor */
+.task-8 .container {
+  display: flex;
+}
+
+.task-8 .item-3 {
+  align-self: flex-end;
+}
